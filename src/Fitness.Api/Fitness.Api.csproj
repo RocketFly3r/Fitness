@@ -17,7 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Member\" />
     <Folder Include="Workout\" />
     <Folder Include="Nutrition\" />
   </ItemGroup>

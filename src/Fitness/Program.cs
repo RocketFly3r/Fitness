@@ -1,4 +1,6 @@
 
+using Fitness.Api.Member.DI;
+
 namespace Fitness
 {
     public class Program
@@ -8,8 +10,8 @@ namespace Fitness
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddMemberApi();
 
-            builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
@@ -26,7 +28,6 @@ namespace Fitness
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 

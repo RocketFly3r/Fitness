@@ -17,10 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Common\Fitness.Api\Fitness.Api.csproj" />
-    <ProjectReference Include="..\Common\Fitness.Application\Fitness.Application.csproj" />
-    <ProjectReference Include="..\Common\Fitness.Domain\Fitness.Domain.csproj" />
-    <ProjectReference Include="..\Common\Fitness.Infrastructure\Fitness.Infrastructure.csproj" />
+    <ProjectReference Include="..\Fitness.Api\Fitness.Api.csproj" />
+    <ProjectReference Include="..\Fitness.Application\Fitness.Application.csproj" />
+    <ProjectReference Include="..\Fitness.Domain\Fitness.Domain.csproj" />
+    <ProjectReference Include="..\Fitness.Infrastructure\Fitness.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
