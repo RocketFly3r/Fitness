@@ -1,0 +1,26 @@
+name: .NET
+
+on:
+  pull_request:
+    types: [closed]   # PR 關閉時觸發（包含 merge）
+    branches: ["**"]  # 匹配所有分支
+  push:
+    branches: [master]  # 可選，如果你也想在 push 時觸發
+
+jobs:
+  build:
+    if: github.event.pull_request.merged == true  # 確保只在合併時執行
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
